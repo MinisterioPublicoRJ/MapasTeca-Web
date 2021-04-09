@@ -5,6 +5,8 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "prettier/prettier": [1],
     "no-use-before-define": "off",
+    "react/prop-types": [1],
+    "react/jsx-props-no-spreading": "off",
   },
   "env": {
     "browser": true
