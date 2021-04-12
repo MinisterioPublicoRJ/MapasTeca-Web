@@ -1,0 +1,37 @@
+.listCardMain {
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0px 3px 8px #00000029;
+  color: var(--dark);
+  display: flex;
+  font-family: var(--defaultFont);
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 1vh;
+  min-height: 75px;
+  overflow: hidden;
+  position: relative;
+  margin-left: 1.2vh;
+}
+
+.listCardRight {
+  background-color: pink;
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+}
+
+.listCardLeft {
+  align-items: center;
+  background-color: purple;
+  /* border-radius: 7px 0 0 7px; */
+  display: flex;
+  justify-content: center;
+  width: 15%;
+}

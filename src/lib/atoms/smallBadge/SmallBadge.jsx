@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { smallBadgeMain } from './SmallBadge.module.css';
-import { useTheme } from '../..';
+import { useTheme } from '../../theming';
 
 function SmallBadge({ innerText, customStyle }) {
   const { secondaryFontColor, defaultFontSize } = useTheme();
