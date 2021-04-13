@@ -1,4 +1,5 @@
 import React from 'react';
+import { action } from '@storybook/addon-actions';
 
 import IconBadge from './IconBadge';
 // import { ClockIcon } from '../../assets/svg';
@@ -33,4 +34,4 @@ export const Full = Template.bind({});
 Full.args = { backgroundColor: '#F86C72' };
 
 export const Clickable = Template.bind({});
-Clickable.args = { backgroundColor: '#71D0A4', handleClick: () => console.log('Fui clicado!') };
+Clickable.args = { backgroundColor: '#71D0A4', onClick: action('Fui clicado!') };

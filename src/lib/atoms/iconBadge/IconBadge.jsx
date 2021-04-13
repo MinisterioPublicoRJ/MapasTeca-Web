@@ -4,22 +4,24 @@ import PropTypes from 'prop-types';
 import { iconBadgeMain } from './IconBadge.module.css';
 // import { useTheme } from '../../theming';
 
-function IconBadge({ backgroundColor, handleClick, text }) {
-  if (handleClick) {
+function IconBadge({ backgroundColor, onClick, text, icon }) {
+  if (onClick) {
     // if it's a button, you'll always need text
     return (
       <button
         type="button"
-        onClick={() => handleClick()}
+        onClick={() => onClick()}
         className={iconBadgeMain}
         style={{ backgroundColor }}
       >
+        {icon}
         {text}
       </button>
     );
   }
   return (
     <div className={iconBadgeMain} style={{ backgroundColor }}>
+      {icon}
       {text}
     </div>
   );
@@ -27,13 +29,14 @@ function IconBadge({ backgroundColor, handleClick, text }) {
 
 IconBadge.propTypes = {
   backgroundColor: PropTypes.string.isRequired,
-  handleClick: PropTypes.func,
-  //   icon: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+  icon: PropTypes.node,
   text: PropTypes.node.isRequired,
 };
 
 IconBadge.defaultProps = {
-  handleClick: undefined,
+  onClick: undefined,
+  icon: undefined,
 };
 
 export default IconBadge;

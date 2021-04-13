@@ -7,6 +7,12 @@
     "no-use-before-define": "off",
     "react/prop-types": [1],
     "react/jsx-props-no-spreading": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.stories.jsx"]
+      },
+    ],
   },
   "env": {
     "browser": true
