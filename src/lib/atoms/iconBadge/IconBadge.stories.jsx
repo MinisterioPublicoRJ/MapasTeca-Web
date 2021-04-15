@@ -29,7 +29,14 @@ Arredondado.args = {
 };
 Arredondado.decorators = [
   (Story) => (
-    <div style={{ width: '80px', height: '80px', overflow: 'hidden', borderRadius: '0 28px 0 28px' }}>
+    <div
+      style={{
+        width: '80px',
+        height: '80px',
+        overflow: 'hidden',
+        borderRadius: '0 28px 0 28px',
+      }}
+    >
       <Story />
     </div>
   ),

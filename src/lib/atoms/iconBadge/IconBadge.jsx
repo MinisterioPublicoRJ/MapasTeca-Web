@@ -21,8 +21,8 @@ function IconBadge({ backgroundColor, text, icon }) {
 
   return (
     <div className={iconBadgeMain} style={outerStyles}>
-      <div>{icon}</div>
-      <div>{text}</div>
+      {icon && <div>{icon}</div>}
+      {text && <div>{text}</div>}
     </div>
   );
 }
