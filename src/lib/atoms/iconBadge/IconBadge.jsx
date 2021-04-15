@@ -2,41 +2,41 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { iconBadgeMain } from './IconBadge.module.css';
-// import { useTheme } from '../../theming';
+import { useTheme } from '../../theming';
 
-function IconBadge({ backgroundColor, onClick, text, icon }) {
-  if (onClick) {
-    // if it's a button, you'll always need text
-    return (
-      <button
-        type="button"
-        onClick={() => onClick()}
-        className={iconBadgeMain}
-        style={{ backgroundColor }}
-      >
-        {icon}
-        {text}
-      </button>
-    );
-  }
+/**
+ * Usado para fins decorativos. Para ações, utilize o ClickableIconBadge para maior acessibilidade.
+ * O badge toma 100% do espaço disponível no pai, então caso o pai tenha bordas redondas e
+ * `overflow: hidden` o IconBadge também vai ficar redondo (exemplo abaixo).
+ */
+function IconBadge({ backgroundColor, text, icon }) {
+  const { smallFontSize, secondaryFontColor, mainFontFamily } = useTheme();
+
+  const outerStyles = {
+    backgroundColor,
+    fontFamily: mainFontFamily,
+    fontSize: smallFontSize,
+    color: secondaryFontColor,
+  };
+
   return (
-    <div className={iconBadgeMain} style={{ backgroundColor }}>
-      {icon}
-      {text}
+    <div className={iconBadgeMain} style={outerStyles}>
+      <div>{icon}</div>
+      <div>{text}</div>
     </div>
   );
 }
 
 IconBadge.propTypes = {
   backgroundColor: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
   icon: PropTypes.node,
   text: PropTypes.node.isRequired,
+  // onClick: PropTypes.func,
 };
 
 IconBadge.defaultProps = {
-  onClick: undefined,
   icon: undefined,
+  // onClick: undefined,
 };
 
 export default IconBadge;
