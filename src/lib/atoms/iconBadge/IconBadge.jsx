@@ -30,13 +30,12 @@ function IconBadge({ backgroundColor, text, icon }) {
 IconBadge.propTypes = {
   backgroundColor: PropTypes.string.isRequired,
   icon: PropTypes.node,
-  text: PropTypes.node.isRequired,
-  // onClick: PropTypes.func,
+  text: PropTypes.node,
 };
 
 IconBadge.defaultProps = {
   icon: undefined,
-  // onClick: undefined,
+  text: undefined,
 };
 
 export default IconBadge;
