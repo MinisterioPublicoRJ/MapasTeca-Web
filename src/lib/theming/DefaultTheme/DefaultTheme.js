@@ -8,6 +8,7 @@ const sectionTitleFontSize = `calc( 1.1 * ${defaultFontSize})`;
 
 const primaryFontColor = '#3b3b3b';
 const secondaryFontColor = 'white';
+const primaryLinkColor = '#28A7E0';
 
 // COLORS
 const colorDanger = '#f86c72';
@@ -22,6 +23,7 @@ const DEFAULT_THEME = {
   // COLORS
   primaryFontColor,
   secondaryFontColor,
+  primaryLinkColor,
   colorDanger,
 };
 
