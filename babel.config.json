@@ -1,0 +1,4 @@
+{
+  "presets": ["@babel/preset-react"],
+  "ignore": ["**/*.stories.jsx", "**/*.stories.mdx"]
+}
