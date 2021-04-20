@@ -4,15 +4,16 @@
   "private": false,
   "main": "build/index.js",
   "module": "build/index.js",
-  "files": [ "build", "README.md" ],
+  "files": [
+    "build",
+    "README.md"
+  ],
   "homepage": "http://MinisterioPublicoRJ.github.io/MapasTeca-Web",
   "repository": {
     "type": "git",
     "url": "https://github.com/MinisterioPublicoRJ/MapasTeca-Web"
   },
-  "dependencies": {
-    "react-scripts": "4.0.3"
-  },
+  "dependencies": {},
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "rm -rf build && NODE_ENV=production babel src/lib --out-dir build --copy-files --no-copy-ignored",
@@ -65,6 +66,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.1.1",
     "react": "17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.3"
   }
 }
