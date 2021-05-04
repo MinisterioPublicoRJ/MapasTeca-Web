@@ -5,10 +5,10 @@ import { smallBadgeMain } from './SmallBadge.module.css';
 import { useTheme } from '../../theming';
 
 function SmallBadge({ innerText, customStyle }) {
-  const { secondaryFontColor, defaultFontSize } = useTheme();
+  const { secondaryFontColor, defaultFontSize, colorDanger } = useTheme();
 
   const styles = {
-    backgroundColor: 'purple',
+    backgroundColor: colorDanger,
     color: secondaryFontColor,
     minWidth: `calc(2 * ${defaultFontSize})`,
     padding: `calc(${defaultFontSize} / 4) ${defaultFontSize}`,

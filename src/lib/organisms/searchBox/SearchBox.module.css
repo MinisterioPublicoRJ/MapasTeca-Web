@@ -1,0 +1,49 @@
+.SearchBoxOuter {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.SearchBoxChildrenContainer {
+  max-width: calc(100% - 35px);
+}
+
+.SearchBoxButtonContainer {
+  align-items: center;
+  border: none;
+  display: flex;
+  height: 35px;
+  justify-content: center;
+  outline: none;
+  transition: background-color 1s;
+  width: 35px;
+}
+
+.SearchBoxHoverContainer {
+  background-color: white;
+  display: flex;
+  height: 100%;
+  right: 35px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: width 2s, opacity 1s;
+}
+
+.SearchBoxHoverContainerOpen {
+  width: calc(100% - 35px);
+  opacity: 100%;
+}
+
+.SearchBoxHoverContainerClosed {
+  opacity: 0%;
+  width: 0px;
+}
+
+.SearchBoxInput {
+  border: none;
+  height: 35px;
+  outline: none;
+  padding: 0;
+  flex: 1;
+}
