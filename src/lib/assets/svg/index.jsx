@@ -1,2 +1,2 @@
-/* eslint-disable import/prefer-default-export */
 export { default as ClockIcon } from './ClockIcon';
+export { default as SearchIcon } from './SearchIcon';

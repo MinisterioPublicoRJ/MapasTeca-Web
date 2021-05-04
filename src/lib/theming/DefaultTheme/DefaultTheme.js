@@ -12,6 +12,7 @@ const primaryLinkColor = '#28A7E0';
 
 // COLORS
 const colorDanger = '#f86c72';
+const primaryColor = '#BDDFF0';
 
 const DEFAULT_THEME = {
   // TYPOGRAPHY
@@ -25,6 +26,7 @@ const DEFAULT_THEME = {
   secondaryFontColor,
   primaryLinkColor,
   colorDanger,
+  primaryColor,
 };
 
 export default DEFAULT_THEME;
