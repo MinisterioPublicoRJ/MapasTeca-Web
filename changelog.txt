@@ -1,2 +1,5 @@
 # V0.0.5
 --- React-Scripts is now a dev dependency
+
+# V0.0.6
+--- SearchBox component

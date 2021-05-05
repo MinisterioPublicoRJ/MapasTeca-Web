@@ -1,0 +1,153 @@
+.IconBadge_iconBadgeMain__21hF4 {
+  -webkit-align-items: center;
+          align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  font-weight: bold;
+  height: 100%;
+  -webkit-justify-content: center;
+          justify-content: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.IconBadge_iconBadgeMain__21hF4::after {
+  content: '';
+}
+
+.IconBadge_iconBadgeMain__21hF4 > div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+
+.IconBadge_iconBadgeMain__21hF4 :first-child {
+  -webkit-align-items: center;
+          align-items: center;
+  -webkit-flex: 2 1;
+          flex: 2 1;
+}
+
+.IconBadge_iconBadgeMain__21hF4 :nth-child(2) {
+  -webkit-flex: 1 1;
+          flex: 1 1;
+}
+
+.SmallBadge_smallBadgeMain__1HUuB {
+  -webkit-align-items: center;
+          align-items: center;
+  border-radius: 20px;
+  display: -webkit-flex;
+  display: flex;
+  font-weight: bold;
+  -webkit-justify-content: center;
+          justify-content: center;
+  padding: 10px 50px;
+}
+
+.ListCard_listCardMain__3geed {
+  border-radius: 7px;
+  box-shadow: 0px 3px 8px #00000029;
+  display: -webkit-flex;
+  display: flex;
+  font-weight: 500;
+  overflow: hidden;
+  /* position: relative; */
+}
+
+.ListCard_listCardRight__F6tlt {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex: 1 1;
+          flex: 1 1;
+}
+
+.ListCard_listCardLeft__1TEKZ {
+  width: 15%;
+}
+
+.SectionHeader_sectionHeaderOuter__1aXku {
+  text-transform: uppercase;
+}
+
+.SectionHeader_sectionHeaderOuter__1aXku > div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+
+.SectionHeader_sectionHeaderOuter__1aXku h2 {
+  display: inline;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.SectionHeader_sectionHeaderOuter__1aXku > span {
+  letter-spacing: 2px;
+}
+
+.SearchBox_SearchBoxOuter__1qI43 {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  position: relative;
+}
+
+.SearchBox_SearchBoxChildrenContainer__1lTYN {
+  max-width: calc(100% - 35px);
+}
+
+.SearchBox_SearchBoxButtonContainer__ZqFI2 {
+  -webkit-align-items: center;
+          align-items: center;
+  border: none;
+  display: -webkit-flex;
+  display: flex;
+  height: 35px;
+  -webkit-justify-content: center;
+          justify-content: center;
+  outline: none;
+  transition: background-color 1s;
+  width: 35px;
+}
+
+.SearchBox_SearchBoxHoverContainer__OWvFr {
+  background-color: white;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  right: 35px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: width 2s, opacity 1s;
+}
+
+.SearchBox_SearchBoxHoverContainerOpen__3M1zK {
+  width: calc(100% - 35px);
+  opacity: 100%;
+}
+
+.SearchBox_SearchBoxHoverContainerClosed__Lg7GE {
+  opacity: 0%;
+  width: 0px;
+}
+
+.SearchBox_SearchBoxInput__mT833 {
+  border: none;
+  height: 35px;
+  outline: none;
+  padding: 0;
+  -webkit-flex: 1 1;
+          flex: 1 1;
+}
+
+
+/*# sourceMappingURL=main.aaa20df6.chunk.css.map*/
