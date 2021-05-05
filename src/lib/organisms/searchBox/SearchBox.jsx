@@ -30,6 +30,7 @@ function SearchBox({ children, onSearch }) {
   function handleCloseButtonClick() {
     setIsOpen(false);
     searchInput.current.value = '';
+    onSearch('');
   }
 
   function handleKeypress({ code }) {

@@ -1,6 +1,6 @@
 {
   "name": "mapasteca-web",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "main": "build/index.js",
   "module": "build/index.js",

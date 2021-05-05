@@ -3,3 +3,6 @@
 
 # V0.0.6
 --- SearchBox component
+
+# V0.0.7
+--- SearchBox now calls onSearch with an empty string when the component is closed
