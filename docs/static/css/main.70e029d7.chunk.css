@@ -132,11 +132,11 @@
 
 .SearchBox_SearchBoxHoverContainerOpen__3M1zK {
   width: calc(100% - 35px);
-  opacity: 100%;
+  opacity: 100;
 }
 
 .SearchBox_SearchBoxHoverContainerClosed__Lg7GE {
-  opacity: 0%;
+  opacity: 0;
   width: 0px;
 }
 
@@ -150,4 +150,4 @@
 }
 
 
-/*# sourceMappingURL=main.aaa20df6.chunk.css.map*/
+/*# sourceMappingURL=main.70e029d7.chunk.css.map*/
