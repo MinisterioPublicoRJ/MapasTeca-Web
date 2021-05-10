@@ -1,6 +1,6 @@
 {
   "name": "mapasteca-web",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "private": false,
   "main": "build/index.js",
   "module": "build/index.js",
@@ -19,7 +19,8 @@
     "build": "rm -rf build && NODE_ENV=production babel src/lib --out-dir build --copy-files --no-copy-ignored",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-storybook": "build-storybook -o docs"
+    "build-storybook": "build-storybook -o docs",
+    "prepublishOnly": "npm run build && npm run build-storybook"
   },
   "eslintConfig": {
     "extends": [
