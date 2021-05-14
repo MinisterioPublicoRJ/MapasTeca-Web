@@ -6,3 +6,6 @@
 
 # V0.0.7
 --- SearchBox now calls onSearch with an empty string when the component is closed
+
+# V0.0.10
+--- Fixing SearchBox so it uses key instead of code on keypress events
