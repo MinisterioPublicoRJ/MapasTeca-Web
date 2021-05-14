@@ -20,7 +20,6 @@ function SearchBox({ children, onSearch }) {
   const { primaryColor, secondaryFontColor } = useTheme();
 
   function handleSearchButtonClick() {
-    console.log("searched!");
     if (!isOpen) {
       setIsOpen(true);
     } else {
@@ -34,15 +33,10 @@ function SearchBox({ children, onSearch }) {
     onSearch('');
   }
 
-  function handleKeypress(e) {
-    console.log('keypressed! event: ', e);
-    console.log("keycode: ", e.keyCode);
-    console.log("key: ", e.key);
-    const {code, key} = e;
-    console.log('code: ', code);
+  function handleKeypress({ code, key }) {
     if (code === 'Enter' || key === 'Enter') {
       handleSearchButtonClick();
-    } else if (code === 'Escape'|| key === 'Escape') {
+    } else if (code === 'Escape' || key === 'Escape') {
       handleCloseButtonClick();
     }
   }
