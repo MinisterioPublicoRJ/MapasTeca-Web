@@ -47,11 +47,13 @@ function ListCard({ title, content, actionText, actionLink, fillColor, icon, det
         </div>
       )}
       <div className={listCardRight} style={charedSectionStyles}>
-        <strong style={titleStyles}>{title}</strong>
+        {title && <strong style={titleStyles}>{title}</strong>}
         {content}
-        <a style={linkStyles} href={actionLink}>
-          {actionText}
-        </a>
+        {actionText && (
+          <a style={linkStyles} href={actionLink}>
+            {actionText}
+          </a>
+        )}
       </div>
     </div>
   );
