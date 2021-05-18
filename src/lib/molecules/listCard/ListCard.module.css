@@ -4,15 +4,19 @@
   display: flex;
   font-weight: 500;
   overflow: hidden;
-  /* position: relative; */
 }
 
 .listCardRight {
   display: flex;
   flex-direction: column;
   flex: 1;
+  max-width: 75%;
 }
 
 .listCardLeft {
   width: 15%;
+}
+
+.listCardRight abbr {
+  text-decoration: none;
 }

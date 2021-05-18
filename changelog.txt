@@ -9,3 +9,6 @@
 
 # V0.0.10
 --- Fixing SearchBox so it uses key instead of code on keypress events
+
+#V0.0.11
+--- Adding fixedHeight option to ListCard
