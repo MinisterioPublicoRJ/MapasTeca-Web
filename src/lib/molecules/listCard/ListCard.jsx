@@ -13,7 +13,16 @@ import { IconBadge } from '../../atoms';
  Não renderiza o detalhe caos não receba uma cor para ele (`detailColor`). Veja `IconBadge` para mais
  informações sobre a aba de detalhe.
  */
-function ListCard({ title, content, actionText, actionLink, fillColor, icon, detailColor }) {
+function ListCard({
+  title,
+  content,
+  actionText,
+  actionLink,
+  fillColor,
+  icon,
+  detailColor,
+  fixedHeight,
+}) {
   const { primaryFontColor, mainFontFamily, smallFontSize, primaryLinkColor } = useTheme();
 
   const lineHeight = `calc( 1.3 * ${smallFontSize})`;
@@ -25,18 +34,34 @@ function ListCard({ title, content, actionText, actionLink, fillColor, icon, det
     lineHeight,
   };
 
-  const charedSectionStyles = {
+  const sharedSectionStyles = {
     padding: lineHeight,
   };
 
   const titleStyles = {
     paddingBottom: `calc( 0.5 * ${smallFontSize})`,
+    ...(fixedHeight
+      ? {
+          textOverflow: 'ellipsis',
+          overflow: 'hidden',
+          height: lineHeight,
+          whiteSpace: 'nowrap',
+        }
+      : {}),
   };
 
   const linkStyles = {
     color: primaryLinkColor,
     fontSize: smallFontSize,
     paddingTop: `calc( 0.5 * ${smallFontSize})`,
+    ...(fixedHeight
+      ? {
+          textOverflow: 'ellipsis',
+          overflow: 'hidden',
+          height: lineHeight,
+          whiteSpace: 'nowrap',
+        }
+      : {}),
   };
 
   return (
@@ -46,8 +71,13 @@ function ListCard({ title, content, actionText, actionLink, fillColor, icon, det
           <IconBadge backgroundColor={detailColor} icon={icon} />
         </div>
       )}
-      <div className={listCardRight} style={charedSectionStyles}>
-        {title && <strong style={titleStyles}>{title}</strong>}
+      <div className={listCardRight} style={sharedSectionStyles}>
+        {/* This will be improved to an accessible solution in the future */}
+        {title && (
+          <strong style={titleStyles}>
+            <abbr title={title}>{title}</abbr>
+          </strong>
+        )}
         {content}
         {actionText && (
           <a style={linkStyles} href={actionLink}>
@@ -67,6 +97,7 @@ ListCard.propTypes = {
   fillColor: PropTypes.string,
   detailColor: PropTypes.string,
   icon: PropTypes.node,
+  fixedHeight: PropTypes.bool,
 };
 ListCard.defaultProps = {
   title: undefined,
@@ -75,5 +106,6 @@ ListCard.defaultProps = {
   fillColor: 'transparent',
   detailColor: undefined,
   icon: undefined,
+  fixedHeight: false,
 };
 export default ListCard;

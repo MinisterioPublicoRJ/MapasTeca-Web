@@ -38,6 +38,25 @@ Complete.args = {
   icon: <ClockIcon />,
 };
 
+export const AlturaFixa = Template.bind({});
+AlturaFixa.args = {
+  title: 'TÍTULO que ReSpEiTa casing TÍTULO que ReSpEiTa casing TÍTULO que ReSpEiTa casing',
+  content: (
+    <span>
+      O
+      <strong>{` conteúdo `}</strong>
+      é determinado pelo usuário e por isso não respeita as regras
+      de elipse e pode ter multiplas linhas!
+    </span>
+  ),
+  actionText: 'Clicando aqui você navega!',
+  actionLink: '',
+  fillColor: 'white',
+  detailColor: '#71D0A4',
+  icon: <ClockIcon />,
+  fixedHeight: true,
+};
+
 export const OnlyText = Template.bind({});
 OnlyText.args = {
   content: <span>Você pode usar apenas texto, sem título, links, ícone ou área de detalhe.</span>,
