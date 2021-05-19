@@ -55,7 +55,6 @@
   display: flex;
   font-weight: 500;
   overflow: hidden;
-  /* position: relative; */
 }
 
 .ListCard_listCardRight__F6tlt {
@@ -65,10 +64,15 @@
           flex-direction: column;
   -webkit-flex: 1 1;
           flex: 1 1;
+  max-width: 75%;
 }
 
 .ListCard_listCardLeft__1TEKZ {
   width: 15%;
+}
+
+.ListCard_listCardRight__F6tlt abbr {
+  text-decoration: none;
 }
 
 .SectionHeader_sectionHeaderOuter__1aXku {
@@ -150,4 +154,4 @@
 }
 
 
-/*# sourceMappingURL=main.70e029d7.chunk.css.map*/
+/*# sourceMappingURL=main.2fddef50.chunk.css.map*/
