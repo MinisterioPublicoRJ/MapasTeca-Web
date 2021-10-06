@@ -28,6 +28,14 @@ Padrao.args = {
     {
       nome: "Repositório",
       status: false
+    },
+    {
+      nome: "Qualidade da base",
+      status: true
+    },
+    {
+      nome: "Última Atualização",
+      status: false
     }
   ]
 };
