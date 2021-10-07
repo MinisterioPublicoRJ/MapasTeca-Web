@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { SearchIcon } from '../../assets';
@@ -18,13 +18,7 @@ import{
 function SearchFilters({ buttonText, onSearch, filters }){ 
   const [isOpen, setIsOpen] = useState(false);
   const searchInput = useRef(null);
-  const [filterStatus, setFilterStatus] = useState([]);
-
-  useEffect(() => {
-    setFilterStatus(filters.map(function(item, i){
-      return filters[i].status;
-    }));
-  }, []);
+  const [filterStatus, setFilterStatus] = useState(filters.map(item => item.status));
 
   function handleSearchButtonClick() {
     onSearch(searchInput.current.value, filterStatus);
