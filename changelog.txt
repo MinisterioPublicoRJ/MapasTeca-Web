@@ -12,3 +12,6 @@
 
 #V0.0.11
 --- Adding fixedHeight option to ListCard
+
+#V0.0.11
+--- SearchFilters component!
