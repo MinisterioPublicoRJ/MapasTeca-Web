@@ -1,0 +1,106 @@
+.searchFiltersContent{
+  display: flex;
+  background-color: white;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  height: 48px;
+}
+
+.searchFilterInputWrapper{
+  display: flex;
+  background-color: #F2F3F8;
+  border-radius: 8px;
+  height: 25px;
+  width: 280px;
+  padding: 5px;
+  margin-left: 8px;
+  align-items: center;
+}
+
+.searchFilterInput{
+  border: none;
+  background: transparent;
+  height: 25px;
+  margin-left: 5px;
+  outline-style: none;
+}
+
+.searchFilterButton{
+  color: #B93B40;
+  background: none;
+  border: none;
+  margin-left: 4px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.searchFilterSection{
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+  transition: all 0.8s ease-out;
+  transition-property: height, opacity, margin-top;
+  padding-left: 20px;
+}
+
+.searchFilterSectionOpen{
+  margin-top: 10px;
+  height: 190px;
+  opacity: 100;
+}
+
+.searchFilterSectionClosed{
+  margin-top: -20px;
+  height: 0;
+  opacity: 0;
+  transition-delay: 0.2s;
+}
+
+.searchFilterSection p{
+  padding-left: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font: 14px roboto;
+  color: #B5B5B5;
+}
+
+.searchFiltersSubDiv{
+  margin-bottom: 15px;
+  font: 14px roboto;
+  color: #666666;
+  align-items: center;
+}
+
+.searchFiltersSubDiv input{
+  margin-right: 10px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+@supports ( appearance: none ) or ( -moz-appearance: none ) or ( -webkit-appearance: none ) {
+  .searchFiltersSubDiv input{
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+  }
+
+  .searchFiltersSubDiv input:checked{
+    background-color: #B93B40;
+  }
+
+  .searchFiltersSubDiv input:checked:after{
+    content: "✓";
+    position: absolute;
+    font-size: 10px;
+    color: white;
+    top: -1px;
+    left: 2px;
+  }
+
+  .searchFiltersSubDiv input:not(:checked){
+    background-color: #F2F3F8;
+    color: white;
+  }
+}
