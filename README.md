@@ -2,6 +2,21 @@
 Nossa biblioteca está registrada no [NPM Registry!](https://www.npmjs.com/package/mapasteca-web). Para adicioná-la a um projeto com React >=17.0.1, é śo rodar:
 `npm i --save mapasteca-web`
 
+Depois, na raiz do seu projeto, importe o hook customizado `Theme Provider` e coloque ele no topo da sua árvore React. Caso você não passe um tema customizado pra ele, ele usará nosso tema padrão.
+
+```
+import { ThemeProvider } from 'mapasteca-web';
+import MY_CUSTOM_THEME from 'myThemeFile.js';
+
+export default function() {
+  return (
+    <ThemeProvider value={MY_CUSTOM_THEME}>
+      <YourApp />
+    </ThemeProvider>
+  );
+}
+```
+
 ## Requerimentos
 - Node 14 ou mais recente, e npm compatível
 
