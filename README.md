@@ -37,7 +37,7 @@ O servidor do StoryBook estará rodando em modo desenvolvimento em [http://local
 - `npm run build`: roda o script de build que o Babel para gerar os arquivos estáticos pro pacote.
 - `npm run build-storybook`: faz o build dos arquivos do Storybook, para que [nossa página no GitHub pages](https://ministeriopublicorj.github.io/MapasTeca-Web/) reflita as mudanças feitas nos componentes. Nosso GitHub Pages já está configurado pra ler os arquivos da pasta `/docs` para a criação da página.
 - `npm run build-win`: versão alternativa do comado de build para quem usa Windows.
-- `npm prepub` e `npm prepub-win`: roda o build correspondente e o build do storybook.
+- `npm run prepub` e `npm run prepub-win`: roda o build correspondente e o build do storybook.
 
 ### Passo a passo
 Para lançar uma nova versão, você precisa:
