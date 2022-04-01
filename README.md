@@ -42,5 +42,5 @@ O servidor do StoryBook estará rodando em modo desenvolvimento em [http://local
 ### Passo a passo
 Para lançar uma nova versão, você precisa:
 1] Buildar os arquivos do pacote pra produção, com `npm run prepub` ou `npm run prepub-win`;
-3] Commitar todos os arquivos e a mudança de versão e dar push pro GitHub. Essa etapa vai atualizar o GitHub pages.
-4] Publicar a nova versão do pacote com `npm publish`.
+2] Commitar todos os arquivos e a mudança de versão e dar push pro GitHub. Essa etapa vai atualizar o GitHub pages.
+3] Publicar a nova versão do pacote com `npm publish`.
