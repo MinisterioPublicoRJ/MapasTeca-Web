@@ -33,11 +33,6 @@ O servidor do StoryBook estará rodando em modo desenvolvimento em [http://local
 - É preciso fazer login na sua conta do npm pelo terminal (`npm login`).
 - Altere a versão do pacote no `package.json`.
 
-### Versão rápida
-É necessário rodar dois comandos, dependendo do sistema operacional.
-`npm prepub` ou `npm prepub-win`
-`npm publish`
-
 ### Explicação dos Scripts
 - `npm run build`: roda o script de build que o Babel para gerar os arquivos estáticos pro pacote.
 - `npm run build-storybook`: faz o build dos arquivos do Storybook, para que [nossa página no GitHub pages](https://ministeriopublicorj.github.io/MapasTeca-Web/) reflita as mudanças feitas nos componentes. Nosso GitHub Pages já está configurado pra ler os arquivos da pasta `/docs` para a criação da página.
