@@ -101,7 +101,7 @@ function SearchFilters({ buttonText, onSearch, filters }){
 SearchFilters.propTypes = {
   buttonText: PropTypes.node.isRequired,
   onSearch: PropTypes.func.isRequired,
-  filters: PropTypes.arrayOf(PropTypes.object).isRequired
+  filters: PropTypes.arrayOf(PropTypes.shape).isRequired
 };
 
 export default SearchFilters;
