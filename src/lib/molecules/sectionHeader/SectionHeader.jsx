@@ -5,10 +5,6 @@ import { sectionHeaderOuter, sectionSubtitle } from './SectionHeader.module.css'
 import { SmallBadge } from '../../atoms';
 
 function SectionHeader({ title, count, subtitle }) {
-  const badgeCustomStyle = {
-    maxHeight: `var(--sectionTitleFontSize)`,
-  };
-
   return (
     <div className={sectionHeaderOuter}>
       <div>
