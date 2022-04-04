@@ -30,6 +30,10 @@ function ListCard({
     lineHeight,
   };
 
+  const sharedSectionStyles = {
+   padding: lineHeight,
+ };
+
   const titleStyles = {
     ...(fixedHeight
       ? {
@@ -59,7 +63,7 @@ function ListCard({
           <IconBadge backgroundColor={detailColor} icon={icon} />
         </div>
       )}
-      <div className={listCardRight}>
+      <div className={listCardRight} style={sharedSectionStyles}>
         {/* This will be improved to an accessible solution in the future */}
         {title && (
           <strong className={listCardTitle} style={titleStyles}>
