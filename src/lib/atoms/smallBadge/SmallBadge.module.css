@@ -5,4 +5,8 @@
   font-weight: bold;
   justify-content: center;
   padding: 10px 50px;
+  background-color: var(--colorDanger);
+  color: var(--secondaryFontColor);
+  min-width: calc(2 * var(--defaultFontSize));
+  padding: calc(var(--defaultFontSize) / 4) var(--defaultFontSize);
 }
