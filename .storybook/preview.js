@@ -1,4 +1,5 @@
 import { ThemeProvider } from '../src/lib/theming/ThemeContext/ThemeContext';
+import '../src/lib/variables.css';
 
 export const parameters = {
   options: {
