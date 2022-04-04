@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { smallBadgeMain } from './SmallBadge.module.css';
-import { useTheme } from '../../theming';
+// import { useTheme } from '../../theming';
 
-function SmallBadge({ innerText, customStyle }) {
-  const { secondaryFontColor, defaultFontSize, colorDanger } = useTheme();
-
+function SmallBadge({ innerText }) {
+  // const { secondaryFontColor, defaultFontSize, colorDanger } = useTheme();
+  /*
   const styles = {
     backgroundColor: colorDanger,
     color: secondaryFontColor,
@@ -14,15 +14,15 @@ function SmallBadge({ innerText, customStyle }) {
     padding: `calc(${defaultFontSize} / 4) ${defaultFontSize}`,
     ...customStyle,
   };
-
+  */
   return (
-    <span className={smallBadgeMain} style={styles}>
+    <span className={smallBadgeMain}>
       {innerText}
     </span>
   );
 }
 
-SmallBadge.propTypes = { innerText: PropTypes.string.isRequired, customStyle: PropTypes.shape({}) };
-SmallBadge.defaultProps = { customStyle: {} };
+SmallBadge.propTypes = { innerText: PropTypes.string.isRequired };
+// SmallBadge.defaultProps = { customStyle: {} };
 
 export default SmallBadge;

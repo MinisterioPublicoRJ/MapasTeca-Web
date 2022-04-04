@@ -17,16 +17,11 @@ function SectionHeader({ title, count, subtitle }) {
   const subtitleStyle = {
     fontSize: defaultFontSize,
   };
-
-  const badgeCustomStyle = {
-    maxHeight: sectionTitleFontSize,
-  };
-
   return (
     <div className={sectionHeaderOuter} style={headerStyles}>
       <div>
         <h2 style={subtitle ? { margin: 0 } : {}}>{title}</h2>
-        {count && <SmallBadge innerText={count} customStyle={badgeCustomStyle} />}
+        {count && <SmallBadge innerText={count} />}
       </div>
       {subtitle && <span style={subtitleStyle}>{subtitle}</span>}
     </div>
