@@ -1,5 +1,8 @@
 .sectionHeaderOuter {
   text-transform: uppercase;
+  color: var(--primaryFontColor);
+  font-family: var(--mainFontFamily);
+  font-size: var(--sectionTitleFontSize);
 }
 
 .sectionHeaderOuter > div {
@@ -15,4 +18,8 @@
 
 .sectionHeaderOuter > span {
   letter-spacing: 2px;
+}
+
+.sectionSubtitle {
+  font-size: var(--defaultFontSize),
 }

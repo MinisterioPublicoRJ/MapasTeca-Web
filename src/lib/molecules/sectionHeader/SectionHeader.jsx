@@ -1,29 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { sectionHeaderOuter } from './SectionHeader.module.css';
-import { useTheme } from '../../theming';
+import { sectionHeaderOuter, sectionSubtitle } from './SectionHeader.module.css';
 import { SmallBadge } from '../../atoms';
 
 function SectionHeader({ title, count, subtitle }) {
-  const { primaryFontColor, sectionTitleFontSize, mainFontFamily, defaultFontSize } = useTheme();
-
-  const headerStyles = {
-    color: primaryFontColor,
-    fontFamily: mainFontFamily,
-    fontSize: sectionTitleFontSize,
+  const badgeCustomStyle = {
+    maxHeight: `var(--sectionTitleFontSize)`,
   };
 
-  const subtitleStyle = {
-    fontSize: defaultFontSize,
-  };
   return (
-    <div className={sectionHeaderOuter} style={headerStyles}>
+    <div className={sectionHeaderOuter}>
       <div>
         <h2 style={subtitle ? { margin: 0 } : {}}>{title}</h2>
         {count && <SmallBadge innerText={count} />}
       </div>
-      {subtitle && <span style={subtitleStyle}>{subtitle}</span>}
+      {subtitle && <span className={sectionSubtitle}>{subtitle}</span>}
     </div>
   );
 }

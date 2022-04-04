@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { listCardMain, listCardRight, listCardLeft } from './ListCard.module.css';
+import { listCardMain, listCardRight, listCardLeft, listCardTitle, listCardLink } from './ListCard.module.css';
 
-import { useTheme } from '../../theming';
+// import { useTheme } from '../../theming';
 import { IconBadge } from '../../atoms';
 
 /**
@@ -23,23 +23,18 @@ function ListCard({
   detailColor,
   fixedHeight,
 }) {
-  const { primaryFontColor, mainFontFamily, smallFontSize, primaryLinkColor } = useTheme();
 
-  const lineHeight = `calc( 1.3 * ${smallFontSize})`;
+  const lineHeight = `calc(1.3 * var(--smallFontSize))`;
   const outerStyles = {
     backgroundColor: fillColor,
-    color: primaryFontColor,
-    fontFamily: mainFontFamily,
-    fontSize: smallFontSize,
     lineHeight,
   };
 
   const sharedSectionStyles = {
-    padding: lineHeight,
-  };
+   padding: lineHeight,
+ };
 
   const titleStyles = {
-    paddingBottom: `calc( 0.5 * ${smallFontSize})`,
     ...(fixedHeight
       ? {
           textOverflow: 'ellipsis',
@@ -51,9 +46,6 @@ function ListCard({
   };
 
   const linkStyles = {
-    color: primaryLinkColor,
-    fontSize: smallFontSize,
-    paddingTop: `calc( 0.5 * ${smallFontSize})`,
     ...(fixedHeight
       ? {
           textOverflow: 'ellipsis',
@@ -74,13 +66,13 @@ function ListCard({
       <div className={listCardRight} style={sharedSectionStyles}>
         {/* This will be improved to an accessible solution in the future */}
         {title && (
-          <strong style={titleStyles}>
+          <strong className={listCardTitle} style={titleStyles}>
             <abbr title={title}>{title}</abbr>
           </strong>
         )}
         {content}
         {actionText && (
-          <a style={linkStyles} href={actionLink}>
+          <a className={listCardLink} style={linkStyles} href={actionLink}>
             {actionText}
           </a>
         )}
