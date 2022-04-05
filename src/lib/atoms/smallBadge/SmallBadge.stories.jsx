@@ -10,7 +10,11 @@ export default {
 const Template = (args) => <SmallBadge {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = { innerText: 'Primário', backgroundColor: '#F86C72' };
+Primary.args = { innerText: 'Primário', backgroundColor: '#F86C72', textColor: '#fff' };
 
 export const Secondary = Template.bind({});
-Secondary.args = { innerText: 'Eu sou muito secundário :o', backgroundColor: '#F86C72' };
+Secondary.args = {
+  innerText: 'Eu sou muito secundário :o',
+  backgroundColor: '#F86C72',
+  textColor: '#fff',
+};

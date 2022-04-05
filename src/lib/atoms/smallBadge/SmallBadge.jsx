@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 
 import { smallBadgeMain } from './SmallBadge.module.css';
 
-function SmallBadge({ innerText, backgroundColor }) {
+function SmallBadge({ innerText, backgroundColor, textColor }) {
   const smallBadgeStyles = {
     backgroundColor,
+    color: textColor,
   };
 
   return (
@@ -18,6 +19,7 @@ function SmallBadge({ innerText, backgroundColor }) {
 SmallBadge.propTypes = {
   innerText: PropTypes.string.isRequired,
   backgroundColor: PropTypes.string.isRequired,
+  textColor: PropTypes.string.isRequired,
 };
 
 export default SmallBadge;
