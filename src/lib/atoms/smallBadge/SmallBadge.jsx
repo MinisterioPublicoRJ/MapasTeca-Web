@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { smallBadgeMain } from './SmallBadge.module.css';
 // import { useTheme } from '../../theming';
 
-function SmallBadge({ innerText }) {
+function SmallBadge({ innerText, customStyle }) {
   // const { secondaryFontColor, defaultFontSize, colorDanger } = useTheme();
   /*
   const styles = {
@@ -16,13 +16,13 @@ function SmallBadge({ innerText }) {
   };
   */
   return (
-    <span className={smallBadgeMain}>
+    <span className={smallBadgeMain} style={customStyle}>
       {innerText}
     </span>
   );
 }
 
-SmallBadge.propTypes = { innerText: PropTypes.string.isRequired };
-// SmallBadge.defaultProps = { customStyle: {} };
+SmallBadge.propTypes = { innerText: PropTypes.string.isRequired, customStyle: PropTypes.shape({}) };
+SmallBadge.defaultProps = { customStyle: {} };
 
 export default SmallBadge;
