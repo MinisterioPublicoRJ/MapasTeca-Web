@@ -1,17 +1,23 @@
-import { Meta } from '@storybook/addon-docs/blocks';
+import { Meta, Source } from '@storybook/addon-docs/blocks';
 
 <Meta title="CSS / Utilização" />
 
 # Como aplicar um estilo customizado no seu projeto
 
-Para alterar o valor de uma variável da MapasTeca em um projeto que a utiliza, basta declarar a variável correspondente e o valor desejado em um lugar acima do componente desejado.
+Para alterar o valor de uma variável da MapasTeca em um projeto que a utiliza, basta declarar a variável correspondente e o valor desejado em um lugar acima do componente MapasTeca.
 
 ### Exemplo:
 Utiliza-se o componente "Small Badge" dentro do componente "Section Header".
 Para alterar a cor de Small Badge, adicione o seguinte código ao CSS do componente pai em Section Header:
 
-###### --colorDanger: #ababab;
+<Source
+  language="css"
+  code={'--colorDanger: #ababab;'}
+/>
 
 Você pode até usar outra variável específica do seu projeto para os componentes da MapasTeca:
 
-###### --colorDanger: var(--minhaPropriaVariavel);
+<Source
+  language="css"
+  code={'--colorDanger: var(--minhaPropriaVariavel);'}
+/>

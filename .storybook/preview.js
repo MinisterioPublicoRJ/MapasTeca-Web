@@ -6,7 +6,7 @@ export const parameters = {
       order: [
         'Intro',
         'CSS',
-        ['Variáveis', 'Utilização', 'Documentação'],
+        ['Variáveis', 'Utilização'],
         'Átomos',
         'Moléculas',
         'Organismos',
