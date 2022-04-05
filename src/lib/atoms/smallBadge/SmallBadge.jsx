@@ -3,11 +3,21 @@ import PropTypes from 'prop-types';
 
 import { smallBadgeMain } from './SmallBadge.module.css';
 
-function SmallBadge({ innerText }) {
-  return <span className={smallBadgeMain}>{innerText}</span>;
+function SmallBadge({ innerText, backgroundColor }) {
+  const smallBadgeStyles = {
+    backgroundColor,
+  };
+
+  return (
+    <span className={smallBadgeMain} style={smallBadgeStyles}>
+      {innerText}
+    </span>
+  );
 }
 
-SmallBadge.propTypes = { innerText: PropTypes.string.isRequired, customStyle: PropTypes.shape({}) };
-SmallBadge.defaultProps = { customStyle: {} };
+SmallBadge.propTypes = {
+  innerText: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string.isRequired,
+};
 
 export default SmallBadge;
