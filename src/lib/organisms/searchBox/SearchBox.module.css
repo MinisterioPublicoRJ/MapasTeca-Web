@@ -17,7 +17,8 @@
   outline: none;
   transition: background-color 1s;
   width: 35px;
-  color: var(--secondaryFontColor),
+  color: var(--secondaryFontColor);
+  /* background-color: var(--primaryColor); */
 }
 
 .SearchBoxHoverContainer {
@@ -47,5 +48,5 @@
   outline: none;
   padding: 0;
   flex: 1;
-  background-color: var(--primaryColor);
+  /* background-color: var(--primaryColor); */
 }

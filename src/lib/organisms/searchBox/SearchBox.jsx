@@ -12,7 +12,7 @@ import {
 } from './SearchBox.module.css';
 import { SearchIcon } from '../../assets';
 
-function SearchBox({ children, onSearch }) {
+function SearchBox({ children, onSearch, backgroundColor, textColor }) {
   const [isOpen, setIsOpen] = useState(false);
   const searchInput = useRef(null);
 
@@ -38,14 +38,23 @@ function SearchBox({ children, onSearch }) {
     }
   }
 
+  const searchBoxButtonStyle = {
+    backgroundColor: isOpen ? backgroundColor : 'transparent',
+  };
+
+  const searchInputStyle = {
+    backgroundColor,
+    color: textColor,
+  };
+
   return (
     <div className={SearchBoxOuter}>
       <div className={SearchBoxChildrenContainer}>{children}</div>
       <button
         className={SearchBoxButtonContainer}
+        style={searchBoxButtonStyle}
         type="button"
         onClick={handleSearchButtonClick}
-        style={{ backgroundColor: isOpen ? 'var(--primaryColor)' : 'transparent' }}
       >
         <SearchIcon />
       </button>
@@ -55,13 +64,10 @@ function SearchBox({ children, onSearch }) {
         }`}
       >
         <button
+          style={searchBoxButtonStyle}
           className={SearchBoxButtonContainer}
           type="button"
           onClick={handleCloseButtonClick}
-          style={{
-            backgroundColor: isOpen ? 'var(--primaryColor)' : 'transparent',
-            color: isOpen ? 'white' : 'transparent'
-          }}
         >
           X
         </button>
@@ -71,6 +77,7 @@ function SearchBox({ children, onSearch }) {
           className={SearchBoxInput}
           onKeyDown={handleKeypress}
           placeholder="Pesquisar na lista"
+          style={searchInputStyle}
         />
       </div>
     </div>
