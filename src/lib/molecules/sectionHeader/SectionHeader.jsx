@@ -5,15 +5,11 @@ import { sectionHeaderOuter, sectionSubtitle } from './SectionHeader.module.css'
 import { SmallBadge } from '../../atoms';
 
 function SectionHeader({ title, count, subtitle }) {
-  const badgeCustomStyle = {
-    maxHeight: sectionTitleFontSize,
-  };
-
   return (
     <div className={sectionHeaderOuter}>
       <div>
         <h2 style={subtitle ? { margin: 0 } : {}}>{title}</h2>
-        {count && <SmallBadge innerText={count} customStyle={badgeCustomStyle} />}
+        {count && <SmallBadge innerText={count} />}
       </div>
       {subtitle && <span className={sectionSubtitle}>{subtitle}</span>}
     </div>
