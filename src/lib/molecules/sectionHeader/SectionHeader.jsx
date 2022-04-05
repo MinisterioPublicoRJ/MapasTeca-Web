@@ -9,7 +9,7 @@ function SectionHeader({ title, count, subtitle }) {
     <div className={sectionHeaderOuter}>
       <div>
         <h2 style={subtitle ? { margin: 0 } : {}}>{title}</h2>
-        {count && <SmallBadge innerText={count} />}
+        {count && <SmallBadge innerText={count} customStyle={badgeCustomStyle} />}
       </div>
       {subtitle && <span className={sectionSubtitle}>{subtitle}</span>}
     </div>

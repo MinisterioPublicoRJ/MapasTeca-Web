@@ -60,6 +60,7 @@ function SearchBox({ children, onSearch }) {
           onClick={handleCloseButtonClick}
           style={{
             backgroundColor: isOpen ? 'var(--primaryColor)' : 'transparent',
+            color: isOpen ? 'white' : 'transparent'
           }}
         >
           X

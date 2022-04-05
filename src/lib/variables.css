@@ -5,7 +5,7 @@
 
   --smallFontSize: clamp(10px, 1.2vh, 14px);
   --defaultFontSize: clamp(12px, 1.5vh, 18px);
-  --sectionTitleFontSize: calc( 1.1 * ${defaultFontSize});
+  --sectionTitleFontSize: calc( 1.1 * var(--defaultFontSize));
 
   --primaryFontColor: #3b3b3b;
   --secondaryFontColor: white;
