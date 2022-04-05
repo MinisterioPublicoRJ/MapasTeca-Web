@@ -18,24 +18,26 @@ const Template = (args) => <SearchFilters {...args} />;
 
 export const Padrao = Template.bind({});
 Padrao.args = {
-  buttonText: "Buscar base de dados",
+  buttonText: 'Buscar base de dados',
   onSearch: action('Callback foi chamado!'),
   filters: [
     {
-      nome: "Nome da base",
-      status: true
+      nome: 'Nome da base',
+      status: true,
     },
     {
-      nome: "Repositório",
-      status: false
+      nome: 'Repositório',
+      status: false,
     },
     {
-      nome: "Qualidade da base",
-      status: true
+      nome: 'Qualidade da base',
+      status: true,
     },
     {
-      nome: "Última Atualização",
-      status: false
-    }
-  ]
+      nome: 'Última Atualização',
+      status: false,
+    },
+  ],
+  primaryColor: '#B93B40',
+  secondaryColor: '#F2F3F8',
 };

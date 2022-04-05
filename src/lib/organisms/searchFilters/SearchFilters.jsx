@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { SearchIcon } from '../../assets';
 
-import{
+import {
   searchFiltersWrapper,
   searchFiltersContent,
   searchFilterInputWrapper,
@@ -15,10 +15,10 @@ import{
   searchFiltersSubDiv,
 } from './SearchFilters.module.css';
 
-function SearchFilters({ buttonText, onSearch, filters }){ 
+function SearchFilters({ buttonText, onSearch, filters, primaryColor, secondaryColor }) {
   const [isOpen, setIsOpen] = useState(false);
   const searchInput = useRef(null);
-  const [filterStatus, setFilterStatus] = useState(filters.map(item => item.status));
+  const [filterStatus, setFilterStatus] = useState(filters.map((item) => item.status));
 
   function handleSearchButtonClick() {
     onSearch(searchInput.current.value, filterStatus);
@@ -30,37 +30,39 @@ function SearchFilters({ buttonText, onSearch, filters }){
     }
   }
 
-  function handleMouseHover(){
+  function handleMouseHover() {
     setIsOpen(true);
   }
 
-  function handleMouseOut(){
+  function handleMouseOut() {
     setIsOpen(false);
   }
-  
-  return(
+
+  const primaryColorStyle = {
+    '--primaryColor': primaryColor,
+    '--secondaryFontColor': secondaryColor,
+  };
+
+  return (
     <div
       className={searchFiltersWrapper}
       onMouseOver={handleMouseHover}
       onFocus={handleMouseHover}
       onMouseOut={handleMouseOut}
       onBlur={handleMouseOut}
+      style={primaryColorStyle}
     >
       <div className={searchFiltersContent}>
         <div className={searchFilterInputWrapper}>
-          <SearchIcon height="16px" width="16px" colorFill="#b93b40" />
-          <input 
+          <SearchIcon height="16px" width="16px" colorFill={primaryColor} />
+          <input
             type="text"
             ref={searchInput}
             className={searchFilterInput}
             onKeyDown={handleKeypress}
           />
         </div>
-        <button
-          type="button"
-          className={searchFilterButton}
-          onClick={handleSearchButtonClick}
-        >
+        <button type="button" className={searchFilterButton} onClick={handleSearchButtonClick}>
           {buttonText}
         </button>
       </div>
@@ -70,10 +72,10 @@ function SearchFilters({ buttonText, onSearch, filters }){
         }`}
       >
         <p>Filtre por:</p>
-        {filters.map(function(item, i){
+        {filters.map(function (item, i) {
           const keyID = `filterID${i}`;
           const filterName = `filterName${i}`;
-          return(
+          return (
             <div key={keyID} className={searchFiltersSubDiv}>
               <input
                 type="checkbox"
@@ -85,13 +87,9 @@ function SearchFilters({ buttonText, onSearch, filters }){
                   setFilterStatus(tempArray);
                 }}
               />
-              <label
-                htmlFor={filterName}
-              >
-                {filters[i].nome}
-              </label>
+              <label htmlFor={filterName}>{filters[i].nome}</label>
             </div>
-          )
+          );
         })}
       </div>
     </div>
@@ -101,7 +99,7 @@ function SearchFilters({ buttonText, onSearch, filters }){
 SearchFilters.propTypes = {
   buttonText: PropTypes.node.isRequired,
   onSearch: PropTypes.func.isRequired,
-  filters: PropTypes.arrayOf(PropTypes.shape).isRequired
+  filters: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };
 
 export default SearchFilters;
