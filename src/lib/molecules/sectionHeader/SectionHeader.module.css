@@ -8,6 +8,7 @@
 .sectionHeaderOuter > div {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .sectionHeaderOuter h2 {
