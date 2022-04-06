@@ -1,4 +1,3 @@
-import { ThemeProvider } from '../src/lib/theming/ThemeContext/ThemeContext';
 import '../src/lib/variables.css';
 
 export const parameters = {
@@ -6,8 +5,11 @@ export const parameters = {
     storySort: {
       order: [
         'Intro',
-        'Temas',
-        ['Temas e personalização', 'Tema Padrão'],
+        ['Introdução', 'Como usar?', 'Log de versões'],
+        'CSS',
+        ['Variáveis', 'Utilização'],
+        'Código funcional',
+        ['Small Badge'],
         'Átomos',
         'Moléculas',
         'Organismos',
@@ -25,8 +27,6 @@ export const parameters = {
 
 export const decorators = [
   (Story) => (
-    <ThemeProvider>
-      <Story />
-    </ThemeProvider>
+    <Story />
   ),
 ];

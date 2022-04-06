@@ -1,0 +1,45 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks';
+import { SmallBadge } from '../../atoms';
+import dedent from 'ts-dedent';
+
+<Meta title="Código funcional / Small Badge" />
+
+# Seu jsx
+
+<Source
+  language="jsx"
+  code={dedent`
+    import React from 'react';
+    import { SmallBadge } from 'mapasteca-web';
+    
+    export default function SuaFuncaoComReturn () {
+      return (
+        <div className="wrapper">
+          <p>Atenção! Você possui novos alertas!</p>
+          <div className="paiDoComponenteMapasteca">
+            <SmallBadge innerText='20' />
+          </div>
+        </div>
+      );
+    }
+  `}
+/>
+
+# Seu CSS
+
+<Source
+  language="css"
+  code={dedent`
+    .wrapper {
+      display: flexbox;
+      flex-direction: column;
+    }
+    .paiDoComponenteMapasteca {
+      --colorDanger: #123123;
+    }
+  `}
+/>
+
+# Explicação
+
+Nesse caso, mudamos a cor da badge do tema padrão para uma cor escolhida. Você também pode alterar todas as variáveis da MapasTeca no seu root para aplicar um "tema".

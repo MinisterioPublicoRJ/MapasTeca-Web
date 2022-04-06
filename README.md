@@ -2,20 +2,9 @@
 Nossa biblioteca está registrada no [NPM Registry!](https://www.npmjs.com/package/mapasteca-web). Para adicioná-la a um projeto com React >=17.0.1, é śo rodar:
 `npm i --save mapasteca-web`
 
-Depois, na raiz do seu projeto, importe o hook customizado `Theme Provider` e coloque ele no topo da sua árvore React. Caso você não passe um tema customizado pra ele, ele usará nosso tema padrão.
+A MapasTeca agora utiliza variáveis de CSS.
+Para alterar o valor de uma variável da MapasTeca em um projeto que a utiliza, basta declarar a variável correspondente e o valor desejado em um lugar acima do componente da MapasTeca.
 
-```
-import { ThemeProvider } from 'mapasteca-web';
-import MY_CUSTOM_THEME from 'myThemeFile.js';
-
-export default function() {
-  return (
-    <ThemeProvider value={MY_CUSTOM_THEME}>
-      <YourApp />
-    </ThemeProvider>
-  );
-}
-```
 
 ## Requerimentos
 - Node 14 ou mais recente, e npm compatível
@@ -41,6 +30,9 @@ O servidor do StoryBook estará rodando em modo desenvolvimento em [http://local
 
 ### Passo a passo
 Para lançar uma nova versão, você precisa:
+
 1] Buildar os arquivos do pacote pra produção, com `npm run prepub` ou `npm run prepub-win`;
+
 2] Commitar todos os arquivos e a mudança de versão e dar push pro GitHub. Essa etapa vai atualizar o GitHub pages.
+
 3] Publicar a nova versão do pacote com `npm publish`.

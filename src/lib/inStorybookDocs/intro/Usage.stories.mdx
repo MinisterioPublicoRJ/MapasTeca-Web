@@ -1,0 +1,37 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Intro/Como usar?" />
+
+# Utilizando a MapasTeca em seu projeto React
+
+## Como importar a MapasTeca
+<Source
+  language="bash"
+  code={'npm i --save mapasteca-web'}
+/>
+
+#### Mas atenção!
+A MapasTeca só funciona com o React >= 17.0.1
+
+## Como utilizar um componente da MapasTeca?
+
+No arquivo onde quer utilizar o componente, insira o seguinte código:
+<Source
+  language="jsx"
+  code={dedent`
+    /*SeuArquivoDeComponente.jsx*/
+    
+    import React from 'react';
+    import { SmallBadge } from 'mapasteca-web';
+    
+    export default function SuaFuncaoComReturn () {
+      return (
+        <div>
+          <SmallBadge innerText='20' />
+        </div>
+      );
+    }
+  `}
+/>
+Pode ser com classe também, claro.
