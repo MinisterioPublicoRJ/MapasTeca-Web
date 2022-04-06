@@ -18,8 +18,13 @@ function SmallBadge({ innerText, backgroundColor, textColor }) {
 
 SmallBadge.propTypes = {
   innerText: PropTypes.string.isRequired,
-  backgroundColor: PropTypes.string.isRequired,
-  textColor: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string,
+  textColor: PropTypes.string,
+};
+
+SmallBadge.defaultProps = {
+  backgroundColor: '#F86C72',
+  textColor: '#fff',
 };
 
 export default SmallBadge;
