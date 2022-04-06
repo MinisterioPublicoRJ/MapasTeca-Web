@@ -100,6 +100,13 @@ SearchFilters.propTypes = {
   buttonText: PropTypes.node.isRequired,
   onSearch: PropTypes.func.isRequired,
   filters: PropTypes.arrayOf(PropTypes.shape).isRequired,
+  primaryColor: PropTypes.string,
+  secondaryColor: PropTypes.string,
+};
+
+SearchFilters.defaultProps = {
+  primaryColor: '#B93B40',
+  secondaryColor: '#F2F3F8',
 };
 
 export default SearchFilters;

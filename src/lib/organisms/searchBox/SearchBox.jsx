@@ -87,5 +87,13 @@ function SearchBox({ children, onSearch, backgroundColor, textColor }) {
 SearchBox.propTypes = {
   children: PropTypes.node.isRequired,
   onSearch: PropTypes.func.isRequired,
+  backgroundColor: PropTypes.string,
+  textColor: PropTypes.string,
 };
+
+SearchBox.defaultProps = {
+  backgroundColor: '#BDDFF0',
+  textColor: '#3b3b3b',
+};
+
 export default SearchBox;

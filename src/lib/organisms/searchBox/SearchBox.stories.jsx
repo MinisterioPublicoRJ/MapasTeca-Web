@@ -22,5 +22,5 @@ Padrao.args = {
   children: <SectionHeader title="Título da Área Título da Área Título da Área Título da Área" />,
   onSearch: action('Callback foi chamado!'),
   backgroundColor: '#BDDFF0',
-  textColor: '#000',
+  textColor: '#3b3b3b',
 };
