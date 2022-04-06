@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { iconBadgeMain } from './IconBadge.module.css';
+import styles from './IconBadge.module.css';
+const { iconBadgeMain } = styles;
 /**
  * Usado para fins decorativos. Para ações, utilize o ClickableIconBadge para maior acessibilidade.
  * O badge toma 100% do espaço disponível no pai, então caso o pai tenha bordas redondas e

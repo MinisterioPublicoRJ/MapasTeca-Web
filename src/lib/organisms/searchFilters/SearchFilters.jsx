@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 import { SearchIcon } from '../../assets';
 
-import{
+import styles from './SearchFilters.module.css';
+const {
   searchFiltersWrapper,
   searchFiltersContent,
   searchFilterInputWrapper,
@@ -13,7 +14,7 @@ import{
   searchFilterSectionClosed,
   searchFilterSectionOpen,
   searchFiltersSubDiv,
-} from './SearchFilters.module.css';
+} = styles;
 
 function SearchFilters({ buttonText, onSearch, filters }){ 
   const [isOpen, setIsOpen] = useState(false);

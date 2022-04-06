@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { listCardMain, listCardRight, listCardLeft, listCardTitle, listCardLink } from './ListCard.module.css';
+import styles from './ListCard.module.css';
+const { listCardMain, listCardRight, listCardLeft, listCardTitle, listCardLink } = styles;
 
 // import { useTheme } from '../../theming';
 import { IconBadge } from '../../atoms';

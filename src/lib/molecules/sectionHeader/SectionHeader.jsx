@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { sectionHeaderOuter, sectionSubtitle } from './SectionHeader.module.css';
+import styles from './SectionHeader.module.css';
+const { sectionHeaderOuter, sectionSubtitle } = styles;
 import { SmallBadge } from '../../atoms';
 
 function SectionHeader({ title, count, subtitle }) {

@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 
-import {
+import styles from './SearchBox.module.css';
+const {
   SearchBoxOuter,
   SearchBoxChildrenContainer,
   SearchBoxButtonContainer,
@@ -9,7 +10,7 @@ import {
   SearchBoxHoverContainerOpen,
   SearchBoxHoverContainerClosed,
   SearchBoxInput,
-} from './SearchBox.module.css';
+} = styles;
 import { SearchIcon } from '../../assets';
 
 function SearchBox({ children, onSearch }) {
