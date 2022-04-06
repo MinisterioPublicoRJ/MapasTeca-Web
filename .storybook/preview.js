@@ -5,11 +5,11 @@ export const parameters = {
     storySort: {
       order: [
         'Intro',
-        ['Introdução', 'Como usar?'],
+        ['Introdução', 'Como usar?', 'Log de versões'],
         'CSS',
         ['Variáveis', 'Utilização'],
-        'Exemplos de código funcional',
-        ['A MapasTeca no meio do seu projeto'],
+        'Código funcional',
+        ['Small Badge'],
         'Átomos',
         'Moléculas',
         'Organismos',
