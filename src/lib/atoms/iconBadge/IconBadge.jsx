@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './IconBadge.module.css';
+
 const { iconBadgeMain } = styles;
 /**
  * Usado para fins decorativos. Para ações, utilize o ClickableIconBadge para maior acessibilidade.
@@ -9,7 +9,6 @@ const { iconBadgeMain } = styles;
  * `overflow: hidden` o IconBadge também vai ficar redondo (exemplo abaixo).
  */
 function IconBadge({ backgroundColor, text, icon }) {
-
   const outerStyles = {
     backgroundColor,
   };

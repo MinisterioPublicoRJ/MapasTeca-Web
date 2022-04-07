@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './SectionHeader.module.css';
-const { sectionHeaderOuter, sectionSubtitle } = styles;
 import { SmallBadge } from '../../atoms';
+
+const { sectionHeaderOuter, sectionSubtitle } = styles;
 
 function SectionHeader({ title, count, subtitle }) {
   return (

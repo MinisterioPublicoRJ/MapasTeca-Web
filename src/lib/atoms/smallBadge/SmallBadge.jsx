@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './SmallBadge.module.css';
+
 const { smallBadgeMain } = styles;
 
 function SmallBadge({ innerText }) {

@@ -1,7 +1,8 @@
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './SearchBox.module.css';
+import { SearchIcon } from '../../assets';
+
 const {
   SearchBoxOuter,
   SearchBoxChildrenContainer,
@@ -11,7 +12,6 @@ const {
   SearchBoxHoverContainerClosed,
   SearchBoxInput,
 } = styles;
-import { SearchIcon } from '../../assets';
 
 function SearchBox({ children, onSearch }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +61,7 @@ function SearchBox({ children, onSearch }) {
           onClick={handleCloseButtonClick}
           style={{
             backgroundColor: isOpen ? 'var(--primaryColor)' : 'transparent',
-            color: isOpen ? 'white' : 'transparent'
+            color: isOpen ? 'white' : 'transparent',
           }}
         >
           X

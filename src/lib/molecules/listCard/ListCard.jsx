@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IconBadge } from '../../atoms';
-
 import styles from './ListCard.module.css';
+
 const { listCardMain, listCardRight, listCardLeft, listCardTitle, listCardLink } = styles;
 
 /**
@@ -22,7 +22,6 @@ function ListCard({
   detailColor,
   fixedHeight,
 }) {
-
   const lineHeight = `calc(1.3 * var(--smallFontSize))`;
   const outerStyles = {
     backgroundColor: fillColor,
@@ -30,8 +29,8 @@ function ListCard({
   };
 
   const sharedSectionStyles = {
-   padding: lineHeight,
- };
+    padding: lineHeight,
+  };
 
   const titleStyles = {
     ...(fixedHeight
