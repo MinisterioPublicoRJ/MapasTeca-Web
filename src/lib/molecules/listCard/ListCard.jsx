@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { IconBadge } from '../../atoms';
 
 import styles from './ListCard.module.css';
 const { listCardMain, listCardRight, listCardLeft, listCardTitle, listCardLink } = styles;
-
-// import { useTheme } from '../../theming';
-import { IconBadge } from '../../atoms';
 
 /**
  * Um card genérico para listas, utiliza o átomo `IconBadge`para os detalhes do lado esquerdo.
