@@ -13,5 +13,8 @@
 #V0.0.11
 --- Adding fixedHeight option to ListCard
 
-#V0.0.11
+#V0.0.12
 --- SearchFilters component!
+
+#V0.0.13
+--- Bumped React version

@@ -1,6 +1,6 @@
 {
   "name": "mapasteca-web",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "private": false,
   "main": "build/index.js",
   "module": "build/index.js",
@@ -20,8 +20,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-storybook": "build-storybook -o docs",
-    "prepublishOnly": "npm run build && npm run build-storybook",
-    "build-win": "rmdir build; set NODE_ENV=production; npx babel src/lib --out-dir build --copy-files --no-copy-ignored"
+    "build-win": "rmdir /s /q build & set NODE_ENV=production && npx babel src/lib --out-dir build --copy-files --no-copy-ignored",
+    "prepub": "npm run build && npm run build-storybook",
+    "prepub-win": "npm run build-win && npm run build-storybook"
   },
   "eslintConfig": {
     "extends": [
@@ -42,7 +43,7 @@
     ]
   },
   "peerDependencies": {
-    "react": "17.0.1",
+    "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "prop-types": "^15.7.2"
   },
@@ -67,7 +68,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.1.1",
-    "react": "17.0.1",
+    "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3"
   }
