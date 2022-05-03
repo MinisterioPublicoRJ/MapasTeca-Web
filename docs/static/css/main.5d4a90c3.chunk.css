@@ -1,0 +1,288 @@
+:root {
+  /* TYPOGRAPHY */
+  --mainFontFamily: Roboto;
+  --secondaryFontFamily: Roboto Slab;
+
+  --smallFontSize: clamp(10px, 1.2vh, 14px);
+  --defaultFontSize: clamp(12px, 1.5vh, 18px);
+  --sectionTitleFontSize: calc( 1.1 * var(--defaultFontSize));
+
+  --primaryFontColor: #3b3b3b;
+  --secondaryFontColor: white;
+  --primaryLinkColor: #28A7E0;
+
+  /* COLORS */
+  --colorDanger: #f86c72;
+  --primaryColor: #BDDFF0;
+}
+
+.SmallBadge_smallBadgeMain__gfI1_ {
+  align-items: center;
+  border-radius: 20px;
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  padding: 10px 50px;
+  background-color: var(--colorDanger);
+  color: var(--secondaryFontColor);
+  min-width: calc(2 * var(--defaultFontSize));
+  padding: calc(var(--defaultFontSize) / 4) var(--defaultFontSize);
+}
+
+.IconBadge_iconBadgeMain__3ikAK {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  height: 100%;
+  justify-content: center;
+  text-transform: uppercase;
+  width: 100%;
+  font-family: var(--mainFontFamily);
+  font-size: var(--smallFontSize);
+  color: var(--secondaryFontColor);
+}
+
+.IconBadge_iconBadgeMain__3ikAK::after {
+  content: '';
+}
+
+.IconBadge_iconBadgeMain__3ikAK > div {
+  display: flex;
+  justify-content: center;
+}
+
+.IconBadge_iconBadgeMain__3ikAK :first-child {
+  align-items: center;
+  flex: 2 1;
+}
+
+.IconBadge_iconBadgeMain__3ikAK :nth-child(2) {
+  flex: 1 1;
+}
+
+.ListCard_listCardMain__3JL6k {
+  border-radius: 7px;
+  box-shadow: 0px 3px 8px #00000029;
+  display: flex;
+  font-weight: 500;
+  overflow: hidden;
+  color: var(--primaryFontColor);
+  font-family: var(--mainFontFamily);
+  font-size: var(--smallFontSize);
+}
+
+.ListCard_listCardRight__2KQ5B {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1;
+  max-width: 75%;
+}
+
+.ListCard_listCardLeft__2aGfk {
+  width: 15%;
+}
+
+.ListCard_listCardRight__2KQ5B abbr {
+  text-decoration: none;
+}
+
+.ListCard_listCardTitle__ZS59T {
+  padding-bottom: calc( 0.5 * var(--smallFontSize));
+}
+
+.ListCard_listCardLink__3ncYj {
+  color: var(--primaryLinkColor);
+  font-size: var(--smallFontSize);
+  padding-top: calc( 0.5 * var(--smallFontSize));
+}
+
+.SectionHeader_sectionHeaderOuter__3L-JF {
+  text-transform: uppercase;
+  color: var(--primaryFontColor);
+  font-family: var(--mainFontFamily);
+  font-size: var(--sectionTitleFontSize);
+}
+
+.SectionHeader_sectionHeaderOuter__3L-JF > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.SectionHeader_sectionHeaderOuter__3L-JF h2 {
+  display: inline;
+  font-weight: normal;
+  margin-top: 0;
+}
+
+.SectionHeader_sectionHeaderOuter__3L-JF > span {
+  letter-spacing: 2px;
+}
+
+.SectionHeader_sectionSubtitle__2toXd {
+  font-size: var(--defaultFontSize),
+}
+
+.SearchBox_SearchBoxOuter__ZFf9t {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.SearchBox_SearchBoxChildrenContainer__1Ivpw {
+  max-width: calc(100% - 35px);
+}
+
+.SearchBox_SearchBoxButtonContainer__1H0vR {
+  align-items: center;
+  border: none;
+  display: flex;
+  height: 35px;
+  justify-content: center;
+  outline: none;
+  transition: background-color 1s;
+  width: 35px;
+  color: var(--secondaryFontColor),
+}
+
+.SearchBox_SearchBoxHoverContainer__3ljhF {
+  background-color: white;
+  display: flex;
+  height: 100%;
+  right: 35px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: width 2s, opacity 1s;
+}
+
+.SearchBox_SearchBoxHoverContainerOpen__2fKmW {
+  width: calc(100% - 35px);
+  opacity: 100;
+}
+
+.SearchBox_SearchBoxHoverContainerClosed__1__4r {
+  opacity: 0;
+  width: 0px;
+}
+
+.SearchBox_SearchBoxInput__2aZBz {
+  border: none;
+  height: 35px;
+  outline: none;
+  padding: 0;
+  flex: 1 1;
+  background-color: var(--primaryColor);
+}
+
+.SearchFilters_searchFiltersContent__1k6Hw{
+  display: flex;
+  background-color: white;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  height: 48px;
+  font-family: var(--mainFontFamily);
+}
+
+.SearchFilters_searchFilterInputWrapper__-P35A{
+  display: flex;
+  background-color: #F2F3F8;
+  border-radius: 8px;
+  height: 25px;
+  width: 280px;
+  padding: 5px;
+  margin-left: 8px;
+  align-items: center;
+}
+
+.SearchFilters_searchFilterInput__1XadP{
+  border: none;
+  background: transparent;
+  height: 25px;
+  margin-left: 5px;
+  outline-style: none;
+}
+
+.SearchFilters_searchFilterButton__3bUyM{
+  color: #B93B40;
+  background: none;
+  border: none;
+  margin-left: 4px;
+  font-size: var(--defaultFontSize);
+  text-transform: uppercase;
+}
+
+.SearchFilters_searchFilterSection__3iBJ4{
+  overflow: hidden;
+  background-color: white;
+  border-radius: 10px;
+  transition: all 0.8s ease-out;
+  transition-property: height, opacity, margin-top;
+  padding-left: 20px;
+}
+
+.SearchFilters_searchFilterSectionOpen__1HQpk{
+  margin-top: 10px;
+  height: 190px;
+  opacity: 100;
+}
+
+.SearchFilters_searchFilterSectionClosed__3c75S{
+  margin-top: -20px;
+  height: 0;
+  opacity: 0;
+  transition-delay: 0.2s;
+}
+
+.SearchFilters_searchFilterSection__3iBJ4 p{
+  padding-left: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font: 14px roboto;
+  color: #B5B5B5;
+}
+
+.SearchFilters_searchFiltersSubDiv__PAJdO{
+  margin-bottom: 15px;
+  font: 14px roboto;
+  color: #666666;
+  align-items: center;
+}
+
+.SearchFilters_searchFiltersSubDiv__PAJdO input{
+  margin-right: 10px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+@supports ((-webkit-appearance: none) or (appearance: none)) or ( -webkit-appearance: none ) {
+  .SearchFilters_searchFiltersSubDiv__PAJdO input{
+    -webkit-appearance: none;
+            appearance: none;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+  }
+
+  .SearchFilters_searchFiltersSubDiv__PAJdO input:checked{
+    background-color: #B93B40;
+  }
+
+  .SearchFilters_searchFiltersSubDiv__PAJdO input:checked:after{
+    content: "✓";
+    position: absolute;
+    font-size: var(--smallFontSize);
+    color: white;
+    top: -1px;
+    left: 2px;
+  }
+
+  .SearchFilters_searchFiltersSubDiv__PAJdO input:not(:checked){
+    background-color: #F2F3F8;
+    color: white;
+  }
+}
+
+/*# sourceMappingURL=main.5d4a90c3.chunk.css.map*/

@@ -5,6 +5,7 @@
   align-items: center;
   border-radius: 10px;
   height: 48px;
+  font-family: var(--mainFontFamily);
 }
 
 .searchFilterInputWrapper{
@@ -31,7 +32,7 @@
   background: none;
   border: none;
   margin-left: 4px;
-  font-size: 13px;
+  font-size: var(--defaultFontSize);
   text-transform: uppercase;
 }
 
@@ -93,7 +94,7 @@
   .searchFiltersSubDiv input:checked:after{
     content: "✓";
     position: absolute;
-    font-size: 10px;
+    font-size: var(--smallFontSize);
     color: white;
     top: -1px;
     left: 2px;

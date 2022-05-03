@@ -1,0 +1,17 @@
+:root {
+  /* TYPOGRAPHY */
+  --mainFontFamily: Roboto;
+  --secondaryFontFamily: Roboto Slab;
+
+  --smallFontSize: clamp(10px, 1.2vh, 14px);
+  --defaultFontSize: clamp(12px, 1.5vh, 18px);
+  --sectionTitleFontSize: calc( 1.1 * var(--defaultFontSize));
+
+  --primaryFontColor: #3b3b3b;
+  --secondaryFontColor: white;
+  --primaryLinkColor: #28A7E0;
+
+  /* COLORS */
+  --colorDanger: #f86c72;
+  --primaryColor: #BDDFF0;
+}
