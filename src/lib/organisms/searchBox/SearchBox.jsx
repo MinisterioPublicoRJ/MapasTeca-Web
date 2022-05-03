@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
+import styles from './SearchBox.module.css';
+import { SearchIcon } from '../../assets';
 
-import {
+const {
   SearchBoxOuter,
   SearchBoxChildrenContainer,
   SearchBoxButtonContainer,
@@ -9,15 +11,11 @@ import {
   SearchBoxHoverContainerOpen,
   SearchBoxHoverContainerClosed,
   SearchBoxInput,
-} from './SearchBox.module.css';
-import { useTheme } from '../../theming';
-import { SearchIcon } from '../../assets';
+} = styles;
 
 function SearchBox({ children, onSearch }) {
   const [isOpen, setIsOpen] = useState(false);
   const searchInput = useRef(null);
-
-  const { primaryColor, secondaryFontColor } = useTheme();
 
   function handleSearchButtonClick() {
     if (!isOpen) {
@@ -48,7 +46,7 @@ function SearchBox({ children, onSearch }) {
         className={SearchBoxButtonContainer}
         type="button"
         onClick={handleSearchButtonClick}
-        style={{ backgroundColor: isOpen ? primaryColor : 'transparent' }}
+        style={{ backgroundColor: isOpen ? 'var(--primaryColor)' : 'transparent' }}
       >
         <SearchIcon />
       </button>
@@ -62,8 +60,8 @@ function SearchBox({ children, onSearch }) {
           type="button"
           onClick={handleCloseButtonClick}
           style={{
-            color: secondaryFontColor,
-            backgroundColor: isOpen ? primaryColor : 'transparent',
+            backgroundColor: isOpen ? 'var(--primaryColor)' : 'transparent',
+            color: isOpen ? 'white' : 'transparent',
           }}
         >
           X
@@ -74,7 +72,6 @@ function SearchBox({ children, onSearch }) {
           className={SearchBoxInput}
           onKeyDown={handleKeypress}
           placeholder="Pesquisar na lista"
-          style={{ backgroundColor: primaryColor }}
         />
       </div>
     </div>

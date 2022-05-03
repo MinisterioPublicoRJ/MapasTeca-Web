@@ -1,10 +1,14 @@
 .sectionHeaderOuter {
   text-transform: uppercase;
+  color: var(--primaryFontColor);
+  font-family: var(--mainFontFamily);
+  font-size: var(--sectionTitleFontSize);
 }
 
 .sectionHeaderOuter > div {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .sectionHeaderOuter h2 {
@@ -15,4 +19,8 @@
 
 .sectionHeaderOuter > span {
   letter-spacing: 2px;
+}
+
+.sectionSubtitle {
+  font-size: var(--defaultFontSize),
 }

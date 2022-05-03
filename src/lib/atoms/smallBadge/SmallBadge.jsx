@@ -1,25 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './SmallBadge.module.css';
 
-import { smallBadgeMain } from './SmallBadge.module.css';
-import { useTheme } from '../../theming';
+const { smallBadgeMain } = styles;
 
-function SmallBadge({ innerText, customStyle }) {
-  const { secondaryFontColor, defaultFontSize, colorDanger } = useTheme();
-
-  const styles = {
-    backgroundColor: colorDanger,
-    color: secondaryFontColor,
-    minWidth: `calc(2 * ${defaultFontSize})`,
-    padding: `calc(${defaultFontSize} / 4) ${defaultFontSize}`,
-    ...customStyle,
-  };
-
-  return (
-    <span className={smallBadgeMain} style={styles}>
-      {innerText}
-    </span>
-  );
+function SmallBadge({ innerText }) {
+  return <span className={smallBadgeMain}>{innerText}</span>;
 }
 
 SmallBadge.propTypes = { innerText: PropTypes.string.isRequired, customStyle: PropTypes.shape({}) };

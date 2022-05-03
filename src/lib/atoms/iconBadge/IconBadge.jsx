@@ -1,22 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './IconBadge.module.css';
 
-import { iconBadgeMain } from './IconBadge.module.css';
-import { useTheme } from '../../theming';
-
+const { iconBadgeMain } = styles;
 /**
  * Usado para fins decorativos. Para ações, utilize o ClickableIconBadge para maior acessibilidade.
  * O badge toma 100% do espaço disponível no pai, então caso o pai tenha bordas redondas e
  * `overflow: hidden` o IconBadge também vai ficar redondo (exemplo abaixo).
  */
 function IconBadge({ backgroundColor, text, icon }) {
-  const { smallFontSize, secondaryFontColor, mainFontFamily } = useTheme();
-
   const outerStyles = {
     backgroundColor,
-    fontFamily: mainFontFamily,
-    fontSize: smallFontSize,
-    color: secondaryFontColor,
   };
 
   return (
